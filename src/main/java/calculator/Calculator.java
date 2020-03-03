@@ -45,10 +45,16 @@ public class Calculator {
         return result;
     }
 
-    public static int module(int operaador1, int operator2) {
+    public static int module(int operaador1, int operator2) throws ArithmeticException {
 
-
-        return result;
+        if (operator2 == 0) {
+            //System.out.println("El divisor es inválido");
+            throw new ArithmeticException("The divisor is invalid");
+        } else {
+            result = operaador1 % operator2;
+            System.out.println("El resultado del modulo entre " + operaador1 + " % " + operator2);
+            return result;
+        }
     }
 
     public static float minimum(int operaador1, int operator2) {
@@ -63,7 +69,7 @@ public class Calculator {
         return result2;
     }
 
-    public static void  operatorsQuestion() {
+    public static void operatorsQuestion() {
 
     }
 
