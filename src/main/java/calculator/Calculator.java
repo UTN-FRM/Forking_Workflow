@@ -20,7 +20,23 @@ public class Calculator {
         return result;
     }
 
-    public static int multiply(int operator1, int operator2) {
+    public static int multiply(int operator1, int operator2) throws Exception {
+        try {
+
+            if (operator1 == 0 || operator2 == 0) {
+
+                throw new ArithmeticException("Operation invalid");
+
+            } else {
+
+                result = operator1 * operator2;
+                //System.out.println("");
+            }
+
+        } catch (Exception e) {
+
+            System.out.println("Error: " + e);
+        }
 
 
         return result;
