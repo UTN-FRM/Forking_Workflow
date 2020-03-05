@@ -16,6 +16,8 @@ public class Calculator {
 
     public static int subtraction(int operator1, int operator2) {
 
+     result = operator1-operator2;
+     System.out.println("El resultado de restarle " +operator2+" a "+operator1 + " es: "+result );
 
         return result;
     }
