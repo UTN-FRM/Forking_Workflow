@@ -39,4 +39,11 @@ public class OtherOperationsTest {
     public void testModuleDivByZero() {
         assertThrows(ArithmeticException.class, () -> this.calculator.module(10, 0), "Divide by zero should throw");
     }
+
+    @Test
+    public void testPower() {
+        int expected = (int) Math.pow(5,3);
+        int result = this.calculator.power(5, 3);
+        assertEquals(expected, result);
+    }
 }

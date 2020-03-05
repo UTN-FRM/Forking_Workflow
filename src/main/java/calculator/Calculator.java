@@ -59,6 +59,8 @@ public class Calculator {
 
     public static int power(int operaador1, int operator2) {
 
+        result = (int) Math.pow(operaador1,operator2);
+        System.out.println("El resultado de elevar " +operaador1+" a la "+operator2 + "° potencia es: "+result );
 
         return result;
     }
