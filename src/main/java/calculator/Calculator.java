@@ -75,8 +75,26 @@ public class Calculator {
 
     public static float minimum(int operaador1, int operator2) {
 
+        try {
+            if (operaador1 != operator2) {
+                if (operaador1 < operator2) {
+                    result = operaador1;
+                    System.out.println("El primer número ingresado es menor que el segundo. Menor: " + operaador1);
+                    return result;
+                } else {
+                    result = operator2;
+                    System.out.println("El segundo número ingresado es menor que el primero. Menor: " + operator2);
+                    return result;
+                }
+            } else {
+                System.out.println("No se puede calcular el mínimo ya que los números son iguales.");
+                return 0;
+            }
+        } catch (Exception e) {
+            System.out.println("Error al obtener el mínimo entre los dos operadores: " + e.getMessage());
+            return 0;
+        }
 
-        return result2;
     }
 
     public static float maximum(int operaador1, int operator2) {
