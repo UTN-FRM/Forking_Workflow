@@ -1,5 +1,9 @@
 package calculator;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Calculator {
     public static int option, operator1, operator2, result;
     public static float result2;
@@ -103,8 +107,21 @@ public class Calculator {
         return result2;
     }
 
-    public static void operatorsQuestion() {
+    public static void operatorsQuestion( ) throws IOException {
 
+        try {
+
+            System.out.println("¿Operator1?");
+            BufferedReader br1 = new BufferedReader(new InputStreamReader(System.in));
+                operator1 = Integer.parseInt(br1.readLine());
+            System.out.println("¿Operator2?");
+            BufferedReader br2 = new BufferedReader(new InputStreamReader(System.in));
+                operator2 = Integer.parseInt(br2.readLine());
+
+        }catch (Exception e){
+
+            System.out.println("Error: "+e);
+        }
     }
 
     public static void questionOption() {
