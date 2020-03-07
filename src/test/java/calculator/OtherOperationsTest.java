@@ -56,4 +56,15 @@ public class OtherOperationsTest {
         System.out.println("Expected: "+expected+". Result: "+result);
         assertEquals(expected,result, 0.0f);
     }
+
+    public void testMinium(){
+        int operator1 = 5;
+        int operator2 = 7;
+        int expected = 5;
+        float result = this.calculator.minimum(operator1,operator2);
+        System.out.println("Expected: "+expected+". Result: "+result);
+        assertEquals(expected,result, 0.0f);
+    }
+
+
 }
