@@ -41,6 +41,22 @@ public class OtherOperationsTest {
     }
 
     @Test
+    public void testPower() {
+        int expected = (int) Math.pow(5,3);
+        int result = this.calculator.power(5, 3);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testMaximum(){
+        int operator1 = -15;
+        int operator2 = -1;
+        int expected = -1;
+        float result = this.calculator.maximum(operator1,operator2);
+        System.out.println("Expected: "+expected+". Result: "+result);
+        assertEquals(expected,result, 0.0f);
+    }
+
     public void testMinium(){
         int operator1 = 5;
         int operator2 = 7;
@@ -49,5 +65,6 @@ public class OtherOperationsTest {
         System.out.println("Expected: "+expected+". Result: "+result);
         assertEquals(expected,result, 0.0f);
     }
+
 
 }
