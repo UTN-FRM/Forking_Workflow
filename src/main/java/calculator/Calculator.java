@@ -9,7 +9,8 @@ public class Calculator {
     }
 
     public static int sum(int operator1, int operator2) {
-
+        result = operator1+operator2;
+        System.out.println("El resultado de la  suma  entre " +operator1+" y "+operator2 + " es: "+result );
 
         return result;
     }
@@ -47,9 +48,28 @@ public class Calculator {
 
     public static float divide(int operator1, int operator2) {
 
+        try {
+
+            if ( operator2 == 0) {
+
+                throw new ArithmeticException("Operation invalid");
+
+            } else {
+
+                result2 = operator1 / operator2;
+                System.out.println("El resultado de la  división  entre " +operator1+" y "+operator2 + " es: "+result2);
+
+            }
+
+        } catch (Exception e) {
+
+            System.out.println("Error: " + e);
+        }
+
 
         return result2;
     }
+
 
     public static int entireDivision(int operator1, int operator2) {
 
