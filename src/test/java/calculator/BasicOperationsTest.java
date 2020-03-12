@@ -18,4 +18,14 @@ public class BasicOperationsTest {
         assertEquals(expected, result);
 
     }
+
+    @Test
+    public void testSum(){
+        int expected = 4 + 6;
+        int result = this.calculator.sum(4,6);
+        System.out.println("Expected (sum): "+expected+ ". Result (sum):"+result);
+        assertEquals(expected, result);
+    }
+
+
 }

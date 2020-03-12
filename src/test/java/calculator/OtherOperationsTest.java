@@ -28,6 +28,15 @@ public class OtherOperationsTest {
         System.out.println("Expected: "+expected+ " - Result: "+result);
         assertEquals(expected,result);
     }
+
+    @Test
+    public void testDivide() throws Exception{
+        float expected = 6.0f / 2.0f;
+        float result = this.calculator.divide(6.0f,2.0f);
+        System.out.println("Expected (divide): "+expected+ ". Result (divide):"+result);
+        assertEquals(expected, result, 0);
+    }
+
 @Test
     public void testModule() {
         int expected = 43 % 10;

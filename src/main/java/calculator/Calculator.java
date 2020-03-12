@@ -46,7 +46,25 @@ public class Calculator {
 
     }
 
-    public static float divide(int operator1, int operator2) {
+    public static float divide(float operator1, float operator2) throws Exception {
+
+        try {
+
+            if ( operator2 == 0) {
+
+                throw new ArithmeticException("Operation invalid");
+
+            } else {
+
+                result2 = operator1 / operator2;
+                System.out.println("El resultado de la  división  entre " +operator1+" y "+operator2 + " es: "+result2);
+
+            }
+
+        } catch (Exception e) {
+
+            System.out.println("Error: " + e);
+        }
 
         try {
 
