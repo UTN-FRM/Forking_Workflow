@@ -46,7 +46,7 @@ public class Calculator {
 
     }
 
-    public static float divide(int operator1, int operator2) {
+    public static float divide(float operator1, float operator2) throws Exception {
 
         try {
 
