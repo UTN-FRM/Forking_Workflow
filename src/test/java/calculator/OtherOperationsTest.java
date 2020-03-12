@@ -50,6 +50,7 @@ public class OtherOperationsTest {
     }
 
     @Test
+
     public void testPower() {
         int expected = (int) Math.pow(5,3);
         int result = this.calculator.power(5, 3);
@@ -74,6 +75,5 @@ public class OtherOperationsTest {
         System.out.println("Expected: "+expected+". Result: "+result);
         assertEquals(expected,result, 0.0f);
     }
-
 
 }
